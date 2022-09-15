@@ -9,19 +9,30 @@ ul {
 }
 
 header {
+    margin-top: 32px;
+    height: 120px;
+}
+
+header div{
+    margin: auto;
+    width: 120px;
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+    border-radius: 50%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 32px;
+    padding: 4px;
+    animation: fromTop .7s 0.1s backwards;
 
 }
 
+
 header img {
-    width: 120px;
-    height: 120px;
-    border-radius: 55%;
-    padding: 0;
-    background-image: linear-gradient(360deg, #9572FC 100% #43E7AD 100% #E2D45C 100%);
+    width: 100%;
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+header img:hover{
+    transform: scale(1.2);
 }
 
 
@@ -44,7 +55,8 @@ main {
     gap: 24px;
     max-width: 580px;
     width: 90%;
-    margin: auto;
+    margin: 32px auto;
+
 }
 
 section {
@@ -52,6 +64,14 @@ section {
     background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
     padding-top: 4px;
     border-radius: 10px;
+    animation: fromBottom .7s backwards ;
+}
+
+section:nth-child(2){
+    animation-delay: .3s;
+}
+section:nth-child(3){
+    animation-delay: .6s;
 }
 
 section div {
@@ -76,6 +96,14 @@ ul {
     margin-top: 24px;
 }
 
+ul li{
+    transition: transform .3s;
+}
+
+ul li:hover{
+    transform: scale(1.2);
+}
+
 .games-list img {
     width: 90px;
     border-radius: 8px;
@@ -84,4 +112,31 @@ ul {
 .channel-list img {
     width: 70px;
     border-radius: 50%;
+    border: 1px solid rebeccapurple;
+}
+
+/* Animation */
+
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
