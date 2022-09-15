@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 ul {
     list-style: none;
 }
@@ -113,6 +117,19 @@ ul li:hover{
     width: 70px;
     border-radius: 50%;
     border: 1px solid rebeccapurple;
+}
+
+footer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background:  #2a2634;
+    width: 100%;
+}
+
+footer a {
+    color: #9572fc;
 }
 
 /* Animation */
