@@ -5,10 +5,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
     <title>NLW eSports</title>
 </head>
 
@@ -24,26 +29,29 @@
             <div>
                 <h2>Meus jogos</h2>
                 <p>Os games que eu curto jogar!</p>
-                <ul class="games-list">
-                    <li>
-                        <a target="_blank" href="https://www.twitch.tv/directory/game/Tibia">
-                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/19619_IGDB-90x120.jpg"
-                                alt="Imagem do jogo Tibia">
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.twitch.tv/directory/game/Lineage%202">
-                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/515349_IGDB-90x120.jpg"
-                                alt="Imagem do jogo Lineage">
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.twitch.tv/directory/game/PUBG%3A%20BATTLEGROUNDS">
-                            <img src="https://static-cdn.jtvnw.net/ttv-boxart/505884-90x120.jpg"
-                                alt="Imagem do jogo PUGB BATTLEGROUNDS">
-                        </a>
-                    </li>
-                </ul>
+
+                <div class="swiper mySwiper">
+                    <ul class="games-list swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a target="_blank" href="https://www.twitch.tv/directory/game/Tibia">
+                                <img src="https://static-cdn.jtvnw.net/ttv-boxart/19619_IGDB-90x120.jpg"
+                                    alt="Imagem do jogo Tibia">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a target="_blank" href="https://www.twitch.tv/directory/game/Lineage%202">
+                                <img src="https://static-cdn.jtvnw.net/ttv-boxart/515349_IGDB-90x120.jpg"
+                                    alt="Imagem do jogo Lineage">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a target="_blank" href="https://www.twitch.tv/directory/game/PUBG%3A%20BATTLEGROUNDS">
+                                <img src="https://static-cdn.jtvnw.net/ttv-boxart/505884-90x120.jpg"
+                                    alt="Imagem do jogo PUGB BATTLEGROUNDS">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section>
@@ -99,6 +107,18 @@
     <footer>
         <p>Desenvolvido por <a href="https://www.linkedin.com/in/eduardo-lima-b0a22a169/">Eduardo Lima</a></p>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            loop: true
+        });
+    </script>
+
 </body>
 
 </html>

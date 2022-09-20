@@ -57,10 +57,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    max-width: 580px;
+    max-width: 360px;
     width: 90%;
     margin: 32px auto;
-
 }
 
 section {
@@ -93,9 +92,9 @@ section p {
     color: #a1a1aa;
 }
 
-ul {
+section ul {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap:  nowrap;
     gap: 16px;
     margin-top: 24px;
 }
@@ -156,4 +155,13 @@ footer a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* swiper */
+section{
+    overflow: hidden;
+}
+
+section ul{
+    gap: 1px;
 }
